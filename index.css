@@ -1,0 +1,230 @@
+
+body{
+    background-color: aqua;
+
+
+
+}
+
+button{
+    background-color: yellow;
+}
+
+#btny:hover{
+    cursor: pointer;
+    background-color:lightgreen;
+}
+
+#b{
+   display: flex;
+   justify-content: flex-end;
+}
+
+.harsh{
+    width: 600px;
+    height: 23px;
+    
+}
+.text{
+ display: none;
+ width: 300px;
+ margin: auto;
+ margin-top: 10px;
+ background-color: pink;
+
+ position: relative;
+ 
+
+/* overflow: auto; */
+border: 5px  #ff5f6d solid;
+height: 250px;
+
+  
+}
+p{
+    padding: 10px;
+    margin: 10px;
+}
+
+@property --angle{
+    syntax:"<angle>";
+        initial-value: 0deg;
+        inherits: false;
+}
+
+.text::after,.text::before{
+    
+
+    content: '';
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    background-image: conic-gradient(
+        from var(--angle),
+        transparent 70%,
+        #ff5f6d);       
+    translate: -50% -50%;
+    left: 50%;
+    top: 50%;
+    z-index: -1;
+    padding: 13px;
+    border-radius: 10px;
+    animation: 2s spin linear infinite;
+    
+    
+    
+}
+.text::before{
+    filter: blur(1.5rem);
+    opacity: 0.5;
+
+}
+@keyframes spin{
+    from{
+        --angle:0deg;
+    }
+    to{
+        --angle:360deg;
+    }
+}
+
+
+#lovebtn{
+    height: 45px;
+    width: 69px;
+    display: none;
+   
+    
+}
+#lovebtn:hover{
+    background-color: red;
+}
+.box{
+    display: flex;
+    justify-content: center;
+
+    
+}
+
+.image {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+margin-left: 15px;
+margin: 10px;
+  
+  
+  
+    
+}
+
+
+.img1 {
+
+    
+    animation: increaseSize 5s ease-out forwards;
+}
+.img2 {
+    
+    animation: increaseSize 5s ease-out forwards;
+}
+.img3 {
+    
+    animation: increaseSize 5s ease-out forwards;
+}
+
+@keyframes increaseSize {
+    0% {
+        width: 50px;
+        height: 100px;
+        transform: scale(0.5);
+    }
+    100% {
+        width: 95px;  /* Final width */
+        height: 160px; /* Final height */
+        transform: scale(1);
+    }
+}
+.a,.b,.c{
+
+   
+    
+   width: 200px;
+   height: 300px;
+   overflow: hidden;
+   
+  display: none;
+   
+}
+.intro{
+   width: 95px;
+   height: 35px;
+ 
+   box-sizing: border-box;
+   position: absolute;
+   color: white;
+   background-color: rgb(27 , 27,27,.3);
+   bottom: 38px;
+   margin-bottom: 130px;
+   overflow: hidden;
+
+  
+  
+
+  
+
+}
+h1{
+    text-align: center;
+   
+    font-size: 15px;
+}
+
+.a,.b,.c:hover{
+    cursor: pointer;
+}
+.t{
+    visibility: hidden;
+    font-size: 10px;
+   margin: 10px;
+   list-style-type: none;
+   padding-left: 0;
+
+   
+    
+    
+}
+
+.a:hover .intro{
+    
+    height: 95px;
+    top: 510px;
+    background: rgb(27 , 27,27,.9);
+    
+
+}
+.b:hover .intro{
+    height: 95px;
+   top: 510px;
+    background: rgb(27 , 27,27,.9);
+   
+}
+.c:hover .intro{
+    height: 95px;
+  top: 510px;
+    background:rgb(27 , 27,27,.9);
+}
+
+.a:hover .t{
+    opacity: 1;
+    visibility: visible;
+
+}
+.b:hover .t{
+    opacity: 1;
+    visibility: visible;
+}
+.c:hover .t{
+    opacity: 1;
+    visibility: visible;
+}
